@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage</title>
+
+    <!-- <style>
+      body {
+        margin: 0;
+        text-align: center;
+        padding: 0;
+        background-color: aliceblue;
+      }
+
+      main {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      main header h1 {
+        background-color: yellow;
+        font-size: 24px;
+        line-height: 18px;
+        padding: 14px;
+        margin: 10px;
+        display: inline-block;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px;
+      }
+
+      .section {
+        width: 400px;
+        height: 300px;
+        border: 2px solid #45de56;
+        margin: 10px;
+        padding: 15px;
+      }
+
+      .section h3 {
+        margin: 10px auto 15px;
+        background-color: #00ffdd;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      audio {
+        display: block;
+        width: 380px;
+        /* height: 130px; */
+        margin-top: 50px;
+        border: 2px solid #45de56;
+        border-radius: 50px;
+        text-emphasis: filled red;
+        box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+      }
+    </style> -->
+
+    <style>
+      header > h1 {
+        color: yellow;
+      }
+      h1 {
+        color: red;
+      }
+      /* div >p
+        {
+            border: 1px solid black;
+        } */
+
+      /* h1,#head1
+        {
+            color: aqua;
+        } */
+      .box-with-shadow {
+        width: 200px;
+        height: 100px;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 5px 2px black;
+      }
+      .box {
+        height: 150px;
+        width: 150px;
+        background-color: aqua;
+        border: 1px solid black;
+        display: inline-block;
+      }
+      #box1 {
+        position: absolute;
+        z-index: -1;  
+        /* top: 40px; 
+        left: 40px; */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="firstdiv">
+        <p>this is my first text</p>
+      </div>
+      <header class="main-heading">
+        <h1 id="head1">Webpage - Embedded Youtube Video, Audio , Video</h1>
+      </header>
+
+      <div class="container">
+        <section class="section">
+          <h3>Youtube Video</h3>
+          <iframe
+            width="380"
+            height="230"
+            src="https://www.youtube.com/embed/QG0hE0R_ng4"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </section>
+
+        <section class="section">
+          <h3>Normal Video</h3>
+          <video width="380" height="230" src="" controls></video>
+        </section>
+
+        <section class="section">
+          <h3>Audio</h3>
+          <audio src="" controls>Listen</audio>
+        </section>
+      </div>
+      <section>
+        <h1>The iframe element</h1>
+
+        <iframe
+          src="https://lpulive.lpu.in/"
+          title="W3Schools Free Online Web Tutorials"
+          height="300px"
+          width="400px"
+        >
+        </iframe>
+      </section>
+      <br /><br /><br /><br /><br />
+      <form action="">
+        <h1>Form for Details</h1>
+
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name: </label>
+          <input type="text" id="name" />
+
+          <label for="email">Email Id: </label>
+          <input type="email" id="email" />
+
+          <label for="num">Phone Number: </label>
+          <input type="tel" id="num" />
+
+          <label for="date">Date of birth: </label>
+          <input type="date" id="date" />
+
+          <br />
+          <br />
+
+          <label for="cou">Country</label>
+          <select name="country" id="cou">
+            <option value="india">India</option>
+            <option value="aus">Australia</option>
+            <option value="new">Newzealand</option>
+          </select>
+
+          <label for="male">Male: <input type="radio" name="gen" /></label>
+          <label for="Female">Female :<input type="radio" name="gen" /></label>
+        </fieldset>
+      </form>
+
+      <ul>
+        <li>
+          <h2>Soft Skills</h2>
+          <ul>
+            <li>Communication</li>
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h2>Soft Skills</h2>
+          <ul>
+            <li>Communication</li>
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="box-with-shadow"></div>
+
+      <div id="box1" class="box">A</div>
+      <div id="box2" class="box">B</div>
+      <div id="box3" class="box">C</div>
+      <div id="box4" class="box">D</div>
+      <div style="height: 2000px; width: 100vw"></div>
+    </main>
+  </body>
+</html>

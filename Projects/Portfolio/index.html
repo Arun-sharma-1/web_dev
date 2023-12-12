@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arun Sharma - Porfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <div class="left">Arun's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#footer">About</a></li>
+            <li><a href="#footer">Services</a></li>
+            <li><a href="#workexp">Experience</a></li>
+            <li><a href="#footer">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          <p class="intro">HI!</p>
+          <div class="name">I am Arun Sharma</div>
+          <!-- <p class="role">FRONTEND WEB DESIGNER</p> -->
+          <span id="element" class="role"></span>
+        </div>
+        <div class="rightsection">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQotQOh4wqcq0jwxFuhCOncNblXdL25BSOKeg&usqp=CAU"
+            alt="developers image"
+            width="500px"
+            height="500px"
+            class="png-img"
+          />
+        </div>
+      </section>
+      <section class="secondsection">
+        <span class="grey-color">What I have done so far...</span>
+        <h1 id="workexp"  class="experience">Work Experience</h1>
+        <div class="horizontal-line">
+          <div class="vertical-line">
+            <img
+              src="./assets/image/dev-png.png"
+              class="vertical-line-img"
+              alt="developer image here"
+            />
+            <div class="vertical-line-text">HTML DEVELOPER</div>
+            <p class="vertical-line-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione porro tempore vero odio voluptatem, reprehenderit cumque vel quidem ullam tenetur incidunt necessitatibus maiores laborum minima, quod, rerum illum? Iste, eveniet?
+            </p>
+          </div>
+          <div class="vertical-line">
+            <img
+              src="./assets/image/dev-png.png"
+              class="vertical-line-img"
+              alt="developer image here"
+            />
+            <div class="vertical-line-text">HTML DEVELOPER</div>
+           <p class="vertical-line-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione porro tempore vero odio voluptatem, reprehenderit cumque vel quidem ullam tenetur incidunt necessitatibus maiores laborum minima, quod, rerum illum? Iste, eveniet?
+            </p>
+          </div>
+          <div class="vertical-line">
+            <img
+              src="./assets/image/dev-png.png"
+              class="vertical-line-img"
+              alt="developer image here"
+            />
+            <div class="vertical-line-text">HTML DEVELOPER</div>
+            <p class="vertical-line-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione porro tempore vero odio voluptatem, reprehenderit cumque vel quidem ullam tenetur incidunt necessitatibus maiores laborum minima, quod, rerum illum? Iste, eveniet?
+            </p>
+          </div>
+          <div class="vertical-line">
+            <img
+              src="./assets/image/dev-png.png"
+              class="vertical-line-img"
+              alt="developer image here"
+            />
+            <div class="vertical-line-text">HTML DEVELOPER</div>
+            <p class="vertical-line-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione porro tempore vero odio voluptatem, reprehenderit cumque vel quidem ullam tenetur incidunt necessitatibus maiores laborum minima, quod, rerum illum? Iste, eveniet?
+            </p>
+          </div>
+      </section>
+    </main>
+    <!-- footer section  -->
+     <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+      </div>
+      <div class="footer-content">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </div>
+  </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["FRONTEND WEB DESIGNER", "FULL STACK WEB DEVELOPER"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
