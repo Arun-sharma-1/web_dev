@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <!-- header starts here  -->
+        <header class="navbar">
+          <div class="logo-container">
+            <img class="logo" src="logo.jpg" alt="" />
+            <div class="logoText">run Sharma</div>
+          </div>
+
+          <div class="nav-items">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contactMe">Contact Me</a></li>
+          </div>
+        </header>
+        <!-- header ends here  -->
+
+        <div class="hero-section">
+          <div class="hero-section-left">
+
+            <div class="hero-section-heading">Hi! Arun Sharma</div>
+
+            <div class="hero-section-heading hero-section-subheading">
+              I am a
+              <span id="element" class="role"></span>
+            </div>
+
+            <div class="hero-section-desc">
+              I'm a software developer and here is my portfolio website. Here
+              you'll learn about my journey as a software developer.
+            </div>
+
+            <div class="btn-pink" id="btn">Hire me</div>
+            
+          </div>
+
+          <div class="hero-section-right">
+            <div class="absolute icons iconDots">
+                <img src="./Images/userAsset/dots.png" alt="">
+            </div>
+            <div class="absolute icons icon-cube">
+                <img src="./Images/userAsset/cube.png" alt="">
+            </div>
+            <div class="absolute icons icon-circle">
+                <img src="./Images/userAsset/circle.png" alt="">
+            </div>
+            <div class="absolute icons iconZigZag">
+                <img src="./Images/userAsset/zigzags.png" alt="">
+            </div>
+            <div class="absolute icons icon-plus">
+                <img src="./Images/userAsset/plus.png" alt="">
+            </div>
+            <div class="UserImage">
+                <img src="./Images/userAsset/UserImage.png" alt="">
+            </div>
+          </div>
+            <div class="faded-text absolute">Arun Sharma</div>
+
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <!-- Setup and start animation! -->
+      <script>
+        var typed = new Typed("#element", {
+          strings: ["FRONTEND WEB DESIGNER", "FULL STACK WEB DEVELOPER"],
+          typeSpeed: 50,
+        });
+      </script>
+    </div>
+  </body>
+</html>
