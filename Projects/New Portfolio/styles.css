@@ -16,7 +16,7 @@
   scroll-behavior: smooth;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 .navbar {
@@ -37,7 +37,7 @@
   text-decoration: none;
   color: #1f1f1f;
   transition: font-weight 0.3s;
-  font-size: 20px;
+  font-size: 1.7rem;
   line-height: 17px;
   cursor: pointer;
 }
@@ -62,7 +62,7 @@
 /* hero section starts */
 
 .hero-section {
-  gap: 5rem;
+  gap: 10rem;
   margin: 4rem auto;
   padding: 0 1rem;
   padding-bottom: 8rem;
@@ -218,36 +218,263 @@
 
 /* Animated button  */
 
-.btn-pink
-{
-    background-color: #e84949;
-    width: 20%;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 1;
+.btn-pink {
+  background-color: #e84949;
+  width: 15rem;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
 }
-.btn-pink::before{
-    content: "";
-    background-color: lightgreen;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+.btn-pink::before {
+  content: "";
+  background-color: lightgreen;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.9s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.9s ease;
 }
-.btn-pink:hover::before
+.btn-pink:hover::before {
+  transform: scaleX(1);
+}
+.btn-pink:hover {
+  font-size: 1.6rem;
+  transition: 0.8s ease-in;
+  cursor: pointer;
+  color: grey;
+}
+
+/* project section starts  */
+
+.projectSection {
+  margin-top: 12rem;
+  background-color: #e7e7e7;
+}
+.projectTitle {
+  color: #e84949;
+  font-size: 90px;
+  line-height: 75px;
+  padding: 50px 0 30px;
+  text-align: center;
+}
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  /* width: 100%; */
+}
+#project1 {
+  background-image: url(./Images/projects/Project1.png);
+  right: 5%;
+}
+#project2 {
+  background-image: url(./Images/projects/Project2.png);
+  left: 5%;
+}
+#project3 {
+  background-image: url(./Images/projects/Project3.png);
+  right: 5%;
+}
+
+#project4 {
+  background-image: url(./Images/projects/Project4.png);
+  left: 5%;
+}
+.projectSkillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* max-width: 60%; */
+  gap: 1em;
+}
+
+.projectSkill {
+  width: 40px;
+}
+.projectCard {
+  width: 80%;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: 0px 0px 40px #1f1f1f;
+  margin: 2rem auto;
+  z-index: 2;
+}
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  padding: 4em;
+  bottom: 20%;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.4s;
+}
+.projectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+  z-index: 1;
+  transition: 0.5s all;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.projectCard:hover::before {
+  transform: scaleX(1);
+}
+.projectNumber {
+  position: absolute;
+  font-size: 200px;
+  font-weight: 600;
+  color: #fff;
+  display: none;
+  z-index: 10;
+  transition: 0.8s;
+}
+.leftProjectContent {
+  left: 5%;
+}
+
+.rightProjectContent {
+  right: 5%;
+}
+.rightNumber {
+  top: -45px;
+  right: -45px;
+}
+.leftNumber {
+  top: -45px;
+  left: -45px;
+}
+.projectCard:hover .projectNumber {
+  display: block;
+}
+.projectHeading {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 3rem;
+  color: white;
+}
+
+.projectSubHeading {
+  font-size: 16px;
+  font-style: italic;
+  width: 70%;
+}
+
+.projectCard:hover .projectContent {
+  transform: scale(1.1);
+}
+.btnGroup {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+
+/* form starts here  */
+.formContainer
 {
-    transform: scaleX(1);
+  width: 100%;
+  /* background-color: rgb(231,231,231); */
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.btn-pink:hover{
-    font-size: 1.8rem;
-    transition: 0.8s ease-in;
-    cursor: pointer;
-    color: grey;
+.formHeading
+{
+  font-size: 5rem;
+  color: var(--bgOrange);
+  padding-top: 2rem;
+}
+.formSubheading
+{
+  font-size: 3rem;
+  color: #343d68aa;
+  text-transform: capitalize;
+}
+.formfield-container
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.formfield
+{
+  width: 100%;
+  height: 42px;
+  margin: 20px 0;
+  padding:0 2rem;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+}
+.formfield-textarea
+{
+  height: auto;
+  padding-top: 1rem;
+}
+
+/* footer starts here  */
+footer{
+  position: relative;
+  margin-top: -1px;
+  background-color: #343d68;
+  padding: 5rem;
+}
+.footer-wrapper
+{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem;
+  align-items: center;
+}
+.footer-fadedText
+{
+  user-select: none;
+  font-size: 6em;
+  color: #e7e7e7a6;
+  bottom: -5%;
+  left: 0%;
+  font-weight: bold;
+}
+div > a
+{
+  text-decoration: none;
+  color: #1f1f1f;
+  transition: font-weight 0.3s;
+  font-size: 1.7rem;
+  line-height: 17px;
+  cursor: pointer;
+  color: white;
+}
+.link-wrapper
+{
+  display: flex;
+}
+.footerLink
+{
+  padding: 10px;
+}
+.footerLink:hover {
+  /* font-weight: 600; */
+  transition: 0.6s ease;
+  transform: scale(1.1);
 }
