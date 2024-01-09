@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arun Share modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .imgclass {
+        border: 2px solid #ffffff30;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-size: cover;
+      }
+      .circle1 {
+        border-radius: 50%;
+        background: linear-gradient(-25deg, #d84869, #f46641);
+        box-shadow: 0 0 50px #d84869;
+        animation: circle1A 8s infinite;
+      }
+      .circle2 {
+        border-radius: 50%;
+        background: linear-gradient(-25deg, #5648d8, #8641f4);
+        box-shadow: 0 0 50px #5648d8;
+        animation: circle2A 8s infinite;
+      }
+      @keyframes circle2A {
+        50% {
+          bottom: 6%;
+          right: 31%;
+        }
+      }
+      @keyframes circle1A {
+        50% {
+          top: 10%;
+          left: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="wrapper"
+      class="overflow-x-hidden bg-black h-[100vh] w-[100vw] relative"
+    >
+      <section
+        class="flex flex-col gap-5 justify-center items-center w-full h-full text-gray-400"
+      >
+        <div
+          class="w-[18rem] h-[18rem] circle1 absolute top-5 left-[27%]"
+        ></div>
+        <div
+          class="w-[23rem] h-[23rem] circle2 absolute bottom-5 right-[30%]"
+        ></div>
+        <div
+          class="h-[550px] bg-[#ffffff1a] py-20 px-20 backdrop-blur-[30px] border-x border-y border-[#ffffff30] bg-opacity-40 rounded-lg space-y-10 flex flex-col justify-center items-center"
+        >
+          <img
+            src="./resumepic.jpg"
+            alt=""
+            width="200px"
+            height="300px"
+            class="imgclass"
+          />
+          <h1 class="text-white text-4xl">Arun Sharma</h1>
+          <p class="text-2xl">Full stack Web developer</p>
+          <div class="flex gap-10 justify-between items-center">
+            <button
+            onclick="openModal()"
+              class="flex gap-3 items-center hover:bg-[#ffffffb9] px-[9px] py-[12px] transition-colors duration-200 cursor-pointer border text-center"
+            >
+              <i class="fa-solid fa-share"></i>
+              <p>Share My Profile</p>
+            </button>
+            <div
+              class="hover:bg-[#ffffffb9] px-[9px] py-[12px] transition-colors duration-200 cursor-pointer w-[150px] text-center border"
+            >
+              Follow me
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- modal component  -->
+    <div class="modal">
+      <div class="flex justify-between items-center">
+        <h3 class="text-3xl">Share this via</h3>
+        <button onclick="closeModal()" ><i class="fa fa-2x fa-close"></i></button>
+      </div>
+      <div class="iconContainer">
+        <a
+          href="https://www.facebook.com/priyansh.patel.94651"
+          class="icon"
+          id="facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/priyansh79" class="icon" id="twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/_p_r_i_y_a_n_s_h/"
+          class="icon"
+          id="instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://web.whatsapp.com/" class="icon" id="whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://web.telegram.org/z/" class="icon" id="telegram">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

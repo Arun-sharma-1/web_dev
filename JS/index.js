@@ -56,7 +56,44 @@
 // let c1 = courses.find(arg => arg.naam == 'arun') //arrow function
 // console.log(c1)
 
-let arr = [1, 2]
-for (let key in arr) { console.log(key) } // it will give the indices in array not values 
-for (let key of arr) { console.log(key) }
-arr.forEach(val => console.log(val))
+// let arr = [1, 2]
+// for (let key in arr) { console.log(key) } // it will give the indices in array not values 
+// for (let key of arr) { console.log(key) }
+// arr.forEach(val => console.log(val))
+
+
+// const wrap = document.querySelector('#wrapper')
+// function textFn(event) {
+//     //  console.log(event.target.textContent) 
+//     if (event.target.nodeName === 'SPAN') {
+//         console.log(event.target.textContent)
+
+//     }
+
+// }
+// wrap.addEventListener('click', textFn, true)
+// console.log(wrap?.parentElement)
+
+// console.log(typeof null);
+// console.log(null instanceof Object); // logs false
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('Jonas'));
+// console.log(Boolean({}));
+// console.log(Boolean(''));
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+console.log(tips)
+console.log( totals);

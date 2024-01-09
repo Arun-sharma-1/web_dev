@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.first-heading {
+  text-align: center;
+  margin: 60px 0px 40px 0;
+  font-weight: bold;
+  font-size: 36px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+#search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #333;
+  border-radius: 5px;
+}
+#search-button {
+  background-color: #138065;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.search-results {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.search-result {
+  width: 30%;
+  height: 100%;
+  margin-bottom: 60px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.search-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2 ease-in-out;
+}
+.search-result:hover img {
+  opacity: 0.8;
+}
+.search-result a {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px;
+  display: block;
+  color: #333;
+}
+#show-more-button {
+  background-color: #008cba;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .search-results {
+    padding: 20px;
+  }
+  .search-result {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .search-result {
+    width: 100%;
+  }
+}

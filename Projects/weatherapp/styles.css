@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+.tab.current-tab {
+  background-color: rgba(219, 226, 239, 0.5);
+}

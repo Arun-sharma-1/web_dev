@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="wrapper" class="overflow-x-hidden w-[100vw] h-[100vh]">
+      <!-- <section class="w-full h-full flex flex-col items-center justify-center"> -->
+      <section>
+        <div class="h-[700px]">
+          <h1 class="text-4xl text-white uppercase">PASSWORD Generator</h1>
+          <div
+            class="flex justify-between my-10 bg-[#160628] h-15 p-3 rounded-md"
+          >
+            <input
+              type="text"
+              readonly
+              placeholder="Password"
+              class="display bg-[#160628] text-3xl leading-[1.2] placeholder:leading-[1.2] tracking-wide text-green-500 placeholder:text-green-500 placeholder:uppercase"
+              data-passwordDisplay
+              class="display"
+            />
+            <button data-copy class="text-white">
+              <span class="cpymsg" data-copyMsg></span>
+              <img src="./images/copy.svg" width="23px" height="25px" alt="" />
+            </button>
+          </div>
+
+          <div
+            class="relative input-container bg-[#160628] h-[500px] flex flex-col justify-between text-white p-5 rounded-lg"
+          >
+            <!-- length section  -->
+            <div class="length-container flex justify-between my-5">
+              <p class="text-2xl font-semibold">Password length</p>
+              <p data-length class="text-green-500 text-lg font-bold">10</p>
+            </div>
+            <!-- slider  -->
+            <input
+              type="range"
+              min="1"
+              max="20"
+              class="slider"
+              data-lengthSlider
+            />
+            <br>
+            <br>
+            <!-- input section  -->
+            <div>
+              <div class="check">
+                <input type="checkbox" id="uppercase" />
+                <label for="uppercase">Include uppercase letters</label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="lowercase" />
+                <label for="lowercase">Include lowercase letters</label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="numbers" />
+                <label for="numbers">Include numbers</label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="symbols" />
+                <label for="symbols">Include symbols</label>
+              </div>
+            </div>
+            <!-- strength section  -->
+            <div class="strength-container flex justify-between items-center mt-4">
+              <p class="font-semibold text-2xl">Strength</p>
+              <div data-indicator class="w-5 h-5 bg-white rounded-full"></div>
+              <!-- data-indicator is custom attribute -->
+            </div>
+            <!-- generate password  -->
+            <button
+              class="generateButton w-full font-bold text-2xl py-3 px-4 rounded-lg my-4 bg-slate-100 text-green-500"
+            >
+              Generate password
+            </button>
+          </div>
+          <button
+            class="bg-red-500 rounded-lg py-3 px-2 text-lg text-green-500 w-[10rem]"
+            clr-button
+          >
+            Clear
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+
+    <script></script>
+  </body>
+</html>
