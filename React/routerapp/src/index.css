@@ -1,0 +1,16 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.active{
+  background-color: lightgreen;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s all;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

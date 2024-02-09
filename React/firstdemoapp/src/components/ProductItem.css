@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pro-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 30px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: aqua;
+    margin: 20px;
+    text-align: center;
+}
