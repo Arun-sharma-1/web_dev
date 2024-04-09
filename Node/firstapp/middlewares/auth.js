@@ -1,19 +1,20 @@
-//auth , isStudent , isAdmin
-const jwt = require('jsonwebtoken');
-require('dotenv').config()
+const jwt = require("jsonwebtoken")
+require("dotenv").config();
+
 
 exports.auth = (req, res, next) => {
     try {
-        const token = req.body.token;
-        // const token = req.cookie.token 
 
+        console.log(req.cookies['token']);
+        // const token = req.body.token || req.header("Authorization").replace("Bearer", " ")
+        const token = req.cookies.token || req.header("Authorization").replace("Bearer", "").trim()
+        // const token = req.body.token 
         if (!token) {
             return res.status(401).json({
                 success: false,
                 message: "token missing"
             })
         }
-
         // verify the token 
         try {
             const decode = jwt.verify(token, process.env.JWT_SECRET);
@@ -21,7 +22,6 @@ exports.auth = (req, res, next) => {
             console.log(decode)
 
             req.user = decode;
-           
         }
         catch (e) {
             return res.status(401).json({
@@ -40,35 +40,39 @@ exports.auth = (req, res, next) => {
         })
     }
 }
+
 exports.isStudent = (req, res, next) => {
     try {
-        if (req.user.role !== 'Student') {
+        if (req.user.role !== "Student") {
             return res.status(401).json({
                 success: false,
-                message: 'protected route for students'
+                message: "This is a protect route for students you can not access it"
             })
         }
-        next()
-    } catch (err) {
-        return res.status(501).json({
+        next();
+    }
+    catch (err) {
+        return res.status(500).json({
             success: false,
-            message: 'user role is not matching '
+            message: "User Role is not Matching"
         })
     }
 }
+
 exports.isAdmin = (req, res, next) => {
     try {
-        if (req.user.role !== 'Admin') {
+        if (req.user.role !== "Admin") {
             return res.status(401).json({
                 success: false,
-                message: 'protected route for Admin'
+                message: "This is a protect route for Admins,you can not access it"
             })
         }
-        next()
-    } catch (err) {
-        return res.status(501).json({
+        next();
+    }
+    catch (err) {
+        return res.status(500).json({
             success: false,
-            message: 'Admin role is not matching '
+            message: "User Role is not Matching"
         })
     }
 }

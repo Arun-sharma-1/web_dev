@@ -65,17 +65,19 @@
 
 
 const express = require('express');
+const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser');
 const app = express();
 
 require('dotenv').config()
 const PORT = process.env.PORT || 4000;
-app.use(express.json())
-
+app.use(bodyParser.json());
+app.use(cookieParser())
 //import routes
 const todoRoutes = require('./routes/todos');
 app.use('/api/v1/', todoRoutes); //mount the todo route //localhost:3000/api/v1/createTodo
 const user = require('./routes/user');
-app.use('/api/v1',user);
+app.use('/api/v1', user);
 //start the server
 app.listen(PORT, () => {
     console.log(`server running at ${PORT}`)
