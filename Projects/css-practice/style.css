@@ -1,0 +1,170 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+#wrapper {
+  background-color: #fff;
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  padding-top: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#nav {
+  height: 10vh;
+  margin-top: 50px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+#nav h2 {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav h1 {
+  font-weight: 700;
+  font-size: 2.5vw;
+  font-family: monument;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav h2:nth-child(2),
+#nav h2:nth-child(3),
+#nav h2:nth-child(4) {
+  border-right: 1px solid black;
+}
+#nav h2:last-child {
+  width: 25%;
+  background: url("https://img.icons8.com/?size=100&id=82712&format=png&color=000000");
+  background-position: center;
+  background-size: cover;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+
+#center {
+  height: calc(100% - 10vh - 54px); /* Adjust height as needed */
+  width: 100%; /* Full width of the parent */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Hide overflow */
+}
+
+#center video {
+  flex-grow: 1;
+  width: 100%; /* Prevent overflow in width */
+  max-height: 100%; /* Prevent overflow in height */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+.scroll {
+  display: flex;
+  gap: 30px;
+  height: 30vh;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  padding: 10px 50px;
+  flex-shrink: 0;
+  /* overflow: hi/d; */
+}
+.scroll img {
+  flex-shrink: 0;
+  /* width: 20vh; */
+  width: 14.5vw;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  height: 95%;
+  background-color: red;
+}
+#container {
+  white-space: no-wrap;
+  display: flex;
+  animation-name: scroll-anime;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes scroll-anime {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 600px) {
+  #nav {
+    height: 10vh;
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  #nav h2 {
+    display: none;
+  }
+  #nav h1 {
+    font-weight: 700;
+    font-size: 10vw;
+    justify-content: start;
+    padding: 10px;
+  }
+
+  #center {
+    margin: 10px 0px;
+    height: 300px; /* Adjust height as needed */
+    width: 100vw; /* Full width of the parent */
+    display: grid;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #center video {
+    flex-grow: 1;
+    max-height: 300px; /* Prevent overflow in height */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  .scroll {
+    display: flex;
+    gap: 30px;
+    height: 20vh;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    padding: 10px 50px;
+  }
+  .scroll img {
+    flex-shrink: 0;
+    width: 15vh;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    height: 95%;
+    background-color: red;
+    animation-name: scroll-anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
